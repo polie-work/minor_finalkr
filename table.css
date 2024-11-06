@@ -1,0 +1,22 @@
+body 
+{background-color:  #DCDCDC;
+    font-family: 'Poiret One';}
+
+nav 
+{text-align: center;}
+
+p 
+{text-align: center;
+    font-size: 25px;}
+
+a 
+{font-size: 25px;}
+
+h3 
+{font-size: 40px;}
+
+h1 {font-size: 55px;}
+
+label {font-size: 25px;}
+
+ul, li, ol {font-size: 25px;}

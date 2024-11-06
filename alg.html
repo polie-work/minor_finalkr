@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-graphy</title>
+</head>
+<body>
+    <a id="top"><h1 style="text-align: center;">V-graphy - Решение задач:</h1></a>
+    <header>
+        <nav>
+            <a href="index.html" target="_self">Основное</a>
+            <a href="passport.html">Паспорт</a>
+            <a href="passport_2.html">Данные V</a>
+            <a href="alg.html">Решение задач</a>
+            <a href="form2.html">Впечатление о V</a>
+            <a href="form1.html">Задать вопрос</a>
+            <a href="table.html">Просмотреть дискографию</a>
+            <a href="https://open.spotify.com/artist/3JsHnjpbhX4SnySpvpa9DK">Прослушать дискографию</a>
+          </nav>
+        </header>
+    <h3 style="text-align: center;">Решение алгометрических задач, №1013:</h3>
+    <form action="https://www.bing.com/search?" id="agl" name="agl" target="_blank">
+    <input type="hidden" name="q" value="Ваше решение отправлено!">
+    <div style="text-align: center;">
+    <p>Задание:<input type="text" id="task" name="task" value="Вычислить Z. Z = XY при X > Y, Z = ln(X + Y ) в противном случае." readonly></p>
+    <p>Введите X:<input id="x"  name="x" type="number" step="any"></p>
+    <p>Введите Y:<input id="y"  name="y" type="number" step="any"></p>
+    <p id="result" name="result"></p>
+    <input class="button_look button_do" type="button" value="«Решить»" onclick="calculate()">
+    <input class="button_look button_do" id="send" type="button" value="«Отправить»">
+    <input class="button_look button_do" id="clear" type="reset" value="«Очистить»" style="display: block; margin: auto;">
+    </div>
+    </form>
+</body>
+<script>
+function calculate() 
+{const X = parseFloat(document.getElementById("x").value);
+const Y = parseFloat(document.getElementById("y").value);
+    let Z;
+
+    if (X > Y) {
+        Z = X * Y; 
+    } 
+    else {
+        Z = Math.log(X + Y); 
+    }
+    document.getElementById("result").innerHTML = `Результат: Z = ${Z}`;}
+
+    function send() 
+    {document.getElementById("agl").submit();}
+    
+    
+    let result;
+    
+    const elementTask = document.getElementById("task");
+    const elementX = document.getElementById("x");
+    const elementY = document.getElementById("y");
+    const elementResultInput = document.getElementById("resultInput");
+    const elementSend = document.getElementById("send");
+    elementSend.addEventListener('click', send)
+</script>
+</html>
